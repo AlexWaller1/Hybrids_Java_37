@@ -3,6 +3,7 @@ class CreateHybrids < ActiveRecord::Migration[6.1]
     create_table :hybrids do |t|
       t.string :img_src
       t.string :caption
+      t.belongs_to :user
 
       t.timestamps
     end
