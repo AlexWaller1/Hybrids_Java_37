@@ -3,7 +3,8 @@ class HybridsController < ApplicationController
 
   # GET /hybrids
   def index
-    @hybrids = Hybrid.all
+    user = User.find(params[:user_id])
+    @hybrids = user.hybrids
 
     render json: @hybrids
   end
